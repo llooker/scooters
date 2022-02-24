@@ -43,6 +43,12 @@ view: scooters {
     sql: ${TABLE}.last_y_coord ;;
   }
 
+  dimension: coordinate {
+    type: location
+    sql_longitude: ${last_y_coord} ;;
+    sql_latitude: ${last_x_coord} ;;
+  }
+
   dimension: model {
     type: string
     sql: ${TABLE}.model ;;
