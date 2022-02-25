@@ -6,18 +6,27 @@ view: technicians {
   }
 
   dimension: id {
+    primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
   }
 
   dimension: last_x_coord {
+    hidden: yes
     type: number
     sql: ${TABLE}.last_x_coord ;;
   }
 
   dimension: last_y_coord {
+    hidden: yes
     type: number
     sql: ${TABLE}.last_y_coord ;;
+  }
+
+  dimension: coordinate {
+    type: location
+    sql_longitude: ${last_y_coord} ;;
+    sql_latitude: ${last_x_coord} ;;
   }
 
   dimension: level {
