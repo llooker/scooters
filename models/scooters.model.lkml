@@ -11,3 +11,5 @@ datagroup: scooters_default_datagroup {
 persist_with: scooters_default_datagroup
 
 explore: scooters {}
+
+explore: technicians {}
