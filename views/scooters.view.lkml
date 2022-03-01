@@ -34,13 +34,11 @@ view: scooters {
   }
 
   dimension: last_x_coord {
-    hidden: yes
     type: number
     sql: ${TABLE}.last_x_coord ;;
   }
 
   dimension: last_y_coord {
-    hidden: yes
     type: number
     sql: ${TABLE}.last_y_coord ;;
   }
