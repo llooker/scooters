@@ -12,13 +12,11 @@ view: technicians {
   }
 
   dimension: last_lng_coord {
-    hidden: yes
     type: number
     sql: ${TABLE}.last_lng_coord ;;
   }
 
   dimension: last_lat_coord {
-    hidden: yes
     type: number
     sql: ${TABLE}.last_lat_coord ;;
   }
