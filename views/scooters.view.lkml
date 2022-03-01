@@ -33,20 +33,20 @@ view: scooters {
     sql: ${TABLE}.last_reported_battery ;;
   }
 
-  dimension: last_x_coord {
+  dimension: last_lng_coord {
     type: number
-    sql: ${TABLE}.last_x_coord ;;
+    sql: ${TABLE}.last_lng_coord ;;
   }
 
-  dimension: last_y_coord {
+  dimension: last_lat_coord {
     type: number
-    sql: ${TABLE}.last_y_coord ;;
+    sql: ${TABLE}.last_lat_coord ;;
   }
 
   dimension: coordinate {
     type: location
-    sql_longitude: ${last_y_coord} ;;
-    sql_latitude: ${last_x_coord} ;;
+    sql_longitude: ${last_lng_coord} ;;
+    sql_latitude: ${last_lat_coord} ;;
   }
 
   dimension: model {

@@ -11,22 +11,22 @@ view: technicians {
     sql: ${TABLE}.id ;;
   }
 
-  dimension: last_x_coord {
+  dimension: last_lng_coord {
     hidden: yes
     type: number
-    sql: ${TABLE}.last_x_coord ;;
+    sql: ${TABLE}.last_lng_coord ;;
   }
 
-  dimension: last_y_coord {
+  dimension: last_lat_coord {
     hidden: yes
     type: number
-    sql: ${TABLE}.last_y_coord ;;
+    sql: ${TABLE}.last_lat_coord ;;
   }
 
   dimension: coordinate {
     type: location
-    sql_longitude: ${last_y_coord} ;;
-    sql_latitude: ${last_x_coord} ;;
+    sql_longitude: ${last_lng_coord} ;;
+    sql_latitude: ${last_lat_coord} ;;
   }
 
   dimension: level {
@@ -62,8 +62,8 @@ view: technicians {
   set: detail {
     fields: [
       id,
-      last_x_coord,
-      last_y_coord,
+      last_lng_coord,
+      last_lat_coord,
       level,
       first_name,
       last_name,
