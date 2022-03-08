@@ -14,11 +14,13 @@ view: technicians {
   dimension: last_lng_coord {
     type: number
     sql: ${TABLE}.last_lng_coord ;;
+    value_format:"##.####"
   }
 
   dimension: last_lat_coord {
     type: number
     sql: ${TABLE}.last_lat_coord ;;
+    value_format:"##.####"
   }
 
   dimension: coordinate {
